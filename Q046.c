@@ -6,14 +6,14 @@ passados pelo usuário através do teclado*/
 
 int main()
 {
-    int dividendo, divisor, resultado, count;
+    int dividendo, divisor, resultado, count, resto;
     
     printf("Insira o dividendo e o divisor\n");
     scanf("%d %d",&dividendo,&divisor);
     
     resultado = dividendo - divisor;
     
-    for(count=1;resultado > 0;count++){
+    for(count=1;(resultado - divisor) >= 0;count++){
         dividendo-=divisor;
         resultado = dividendo - divisor;
     }
